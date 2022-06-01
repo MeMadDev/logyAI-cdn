@@ -1,4 +1,5 @@
-document.body.innerHTML+=`<a href="https://logy.ai/apollodental" target='_blank'>
+var body_wrapper = document.createElement("div");
+body_wrapper.innerHTML+=`<a href="https://logy.ai/apollodental" target='_blank'>
 <div 
 style="
 position: absolute;
@@ -48,10 +49,9 @@ width: 100px;
 </button>
 </div>
 `
-
+document.body.insertBefore(body_wrapper, document.body.firstChild);
 const btnCross=document.getElementById('btnCross');
 const floaterInstructions=document.getElementById('floaterInstructions');
 btnCross.addEventListener('click',function () {
     floaterInstructions.style.display='none'
 })
-
