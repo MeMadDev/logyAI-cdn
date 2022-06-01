@@ -1,8 +1,8 @@
-var body_wrapper = document.createElement("div");
-body_wrapper.innerHTML+=`<a href="https://logy.ai/apollodental" target='_blank'>
+document.body.innerHTML+=`<a style="z-index:100" href="https://logy.ai/apollodental" target='_blank'>
 <div 
 style="
-position: absolute;
+z-index:100;
+position: fixed;
 top: 50vh;
 left: 4px;
 height: 100px;
@@ -42,14 +42,14 @@ width: 100px;
 </style>
 </div>
 </a>
-<div id="floaterInstructions" style="position:absolute;height:100px;width:250px;top:50vh;left: 108px;">
+<div id="floaterInstructions" style="z-index:100;position:fixed;height:100px;width:250px;top:50vh;left: 108px;">
 <img src="https://raw.githubusercontent.com/Debaprasad-dez/logyFloater/c15c1666a5a4532a346f22b9b704bc6f50035796/instructions.svg" alt="">
 <button id="btnCross" style="position: absolute;background: none;border: none;cursor: pointer;">
     <img  src="https://raw.githubusercontent.com/Debaprasad-dez/logyFloater/c15c1666a5a4532a346f22b9b704bc6f50035796/cross.svg" alt="">
 </button>
 </div>
 `
-document.body.insertBefore(body_wrapper, document.body.firstChild);
+
 const btnCross=document.getElementById('btnCross');
 const floaterInstructions=document.getElementById('floaterInstructions');
 btnCross.addEventListener('click',function () {
