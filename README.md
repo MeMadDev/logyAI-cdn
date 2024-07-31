@@ -1,1 +1,1 @@
-# cdn
+# cdn Logy.AI
